@@ -40,9 +40,11 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         int people = 12_000_000;
-        int total = (17 - 8) * 12_000_000 / 1_000;
+        int birthRate = 17;
+        int deathRate = 8;
+        int positiveRate = birthRate - deathRate;
         for (int i = 1; i <= 10; i++) {
-            people = people + total;
+            people += people / 1000 * positiveRate;
             System.out.println("Год " + i + " численность населения составляет " + people);
         }
 
